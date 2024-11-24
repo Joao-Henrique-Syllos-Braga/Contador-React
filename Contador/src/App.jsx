@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './App.css';
+import Div from './components/container';
+import Button from './components/button';
 
 function App() {
   const [cont, setCont] = useState(0);
@@ -7,13 +9,16 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        <button className='contador' onClick={() => {
+
+    <Div className="container">
+      <Button className="contador"onClick={() => {
           setCont(cont + 1);
           setText(cont + 1)
+        }}>{text}</Button>
 
-        }}>{text}</button>
-      </div>
+
+    </Div>
+      
     </>
   );
 }
